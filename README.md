@@ -11,7 +11,7 @@ Images can be JPG, GIF, or PNG, up to 128 pixels in width and height, and a maxi
 * Make sure you have pip
 * Install dependencies
 ```
-$ pip install -r requirements.txts
+$ pip install -r requirements.txt
 ```
 
 ## Getting started
