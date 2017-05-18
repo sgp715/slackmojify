@@ -23,6 +23,10 @@ $ chmod +x slackmojify.py
 
 
 ## Getting started
+* To see the usage description
+```
+$ python3 slackmojify.py -h
+```
 * To compress an image run (where <path/to/image> is the image you want to compress)
 ```
 $ python3 slackmojify.py <path/to/image>

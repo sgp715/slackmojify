@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 import argparse
 import imghdr
 from PIL import Image
@@ -21,13 +22,13 @@ def slackmojify(image_path, save_path="new_image"):
     else:
         print("Not a valid filetype.")
 
-    # print("File already satisfies slackmoji requirements.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Make a file uploadable as a slackmoji.")
     parser.add_argument("image", metavar='I', type=str, nargs=1, help="path to the file to minimize")
     parser.add_argument("-s", "--save", type=str, nargs=1, help="specify the file to save the new image to")
     args = parser.parse_args()
+    print(args.save)
     if args.save:
         slackmojify(args.image[0], args.save[0])
     else:
