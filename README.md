@@ -8,14 +8,34 @@ Images can be JPG, GIF, or PNG, up to 128 pixels in width and height, and a maxi
 
 
 ## Install
-* Make sure you have pip
+* Developed in Python 3
+* Make sure you have pip3
 * Install dependencies
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
+* If you want to run it without specifying python, simply give it executable perms
+```
+$ chmod +x slackmojify.py
+```
+* Then either add its location to your path or add somewhere in your existing path
+* Or do something like alias...you know the drill
+
 
 ## Getting started
-* Run
+* To compress an image run (where <path/to/image> is the image you want to compress)
 ```
 $ python3 slackmojify.py <path/to/image>
+```
+* You can also specify where you would like to save the image
+```
+$ python3 slackmojify.py <path/to/image> -s <location/to/save/image>
+```
+* Coming soon: generated a gif from images in <path/to/folder>
+```
+python3 slackmojify.py -g <path/to/folder>
+```
+* Coming soon: upload to your slack account
+```
+python3 slackmojify.py <path/to/image> -u
 ```
