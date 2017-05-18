@@ -54,6 +54,7 @@ def mini_gif(directory):
     directory: contains the images to include in gif
     compresses images in folder so they can be made into a gif
     """
+    # TODO: make sure all images are the same size
     images = []
     sub_dirs = list(os.walk(directory))[0][2]
     for image_path in sub_dirs:
