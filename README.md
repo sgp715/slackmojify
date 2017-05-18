@@ -33,9 +33,9 @@ $ python3 slackmojify.py <path/to/image> -s <location/to/save/image>
 ```
 * Coming soon: generated a gif from images in <path/to/folder>
 ```
-python3 slackmojify.py -g <path/to/folder>
+$ python3 slackmojify.py -g <path/to/folder>
 ```
 * Coming soon: upload to your slack account
 ```
-python3 slackmojify.py <path/to/image> -u
+$ python3 slackmojify.py <path/to/image> -u
 ```
