@@ -1,8 +1,5 @@
 # Slackmojify
 
-## TODO
-* add this as submodule -> https://github.com/isaacgerg/images2gif
-
 ## Description
 We all know how awesome emojis are. They can lighten the mood :laughing: or start a conversation . Many people believe they are the :key: to any good relationship. And some have even gone as far as to say they are the windows to the soul :eyes:. I'm not sure if all of that is true. But, I do believe that they make Slack a whole lot more entertaining. So, its awesome that Slack let's you add custom emojis. But, sometimes it can be annoying figuring out how to compress an image to just the right amount so it meets Slack's custom emoji requirements. Slackmojify is a python package that can be used as a CLI to easily compress an image so that it is easy to upload as a custom emoji to Slack.
 
@@ -16,6 +13,10 @@ Images can be JPG, GIF, or PNG, up to 128 pixels in width and height, and a maxi
 * Install dependencies
 ```
 $ pip3 install -r requirements.txt
+```
+* Pull submodules
+```
+$ git submodule update
 ```
 * If you want to run it without specifying python, simply give it executable perms
 ```
