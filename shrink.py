@@ -1,5 +1,8 @@
 import unittest
 from math import floor
+import os
+import imghdr
+from PIL import Image, ImageSequence
 
 
 MAX_DIMENSION = 128
@@ -29,17 +32,37 @@ def _determine_dimensions(ideal_dimensions, current_dimensions):
     else:
         return int((ideal_height / current_height) * current_width), ideal_height
 
-def mini(image):
+def mini(image_path):
     """
     https://www.youtube.com/watch?v=--hsVknT1c0
     image: A pillow image object
     returns an image that is shrunk to fit within slacks constraints
     """
-    new_dims = _determine_dimensions((MAX_DIMENSION, MAX_DIMENSION), image.size)
-    return image.resize((new_dims))
+    img_type = imghdr.what(image_path)
+    valid_types = ["jpeg", "png"]
+    if img_type in valid_types:
+        image = Image.open(image_path)
+        new_dims = _determine_dimensions((MAX_DIMENSION, MAX_DIMENSION), image.size)
+        return image.resize((new_dims))
+    return None
 
-def reduce_quality(image_path):
+def reduce_quality(image):
     pass
+
+def mini_gif(directory):
+    """
+    directory: contains the images to include in gif
+    compresses images in folder so they can be made into a gif
+    """
+    images = []
+    sub_dirs = list(os.walk(directory))[0][2]
+    for image_path in sub_dirs:
+        compressed_image = mini(os.path.join(directory, image_path))
+        if compressed_image == None:
+            print("One of the images was not valid.")
+            return None
+        images.append(compressed_image)
+    return images
 
 
 class Tests(unittest.TestCase):

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-
 import argparse
-import imghdr
-from PIL import Image
-from shrink import mini
+from shrink import mini, mini_gif
+import os
+import imageio
+from images2gif import images2gif
 
 
 def slackmojify(image_path, save_path="new_image"):
@@ -13,14 +13,17 @@ def slackmojify(image_path, save_path="new_image"):
     this function takes the image and compresses it to a size that
     that is small enough to be uploaded as a custom emoji to Slack
     """
-    img_type = imghdr.what(image_path)
-    valid_types = ["jpeg", "png"] #, "gif"]
-    if img_type in valid_types:
-        image = Image.open(image_path)
-        resized_image = mini(image)
-        resized_image.save(save_path + '.' + img_type)
+
+    compressed = None
+    if os.path.isfile(image_path):
+        compressed = mini(image_path)
+        compressed.save(save_path + os.path.splitext(image_path)[1])
+    elif os.path.isdir(image_path):
+        # assume it is a directory and we want to make a gif
+        compressed = mini_gif(image_path)
+        images2gif.writeGif(save_path + ".gif", compressed)
     else:
-        print("Not a valid filetype.")
+        print("Could not create compressed image.")
 
 
 if __name__ == "__main__":
@@ -28,7 +31,6 @@ if __name__ == "__main__":
     parser.add_argument("image", metavar='I', type=str, nargs=1, help="path to the file to minimize")
     parser.add_argument("-s", "--save", type=str, nargs=1, help="specify the file to save the new image to")
     args = parser.parse_args()
-    print(args.save)
     if args.save:
         slackmojify(args.image[0], args.save[0])
     else:

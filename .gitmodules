@@ -1,0 +1,3 @@
+[submodule "images2gif"]
+	path = images2gif
+	url = https://github.com/isaacgerg/images2gif.git
