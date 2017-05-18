@@ -39,6 +39,6 @@ $ python3 slackmojify.py <path/to/image>
 ```
 $ python3 slackmojify.py <path/to/image> -s <location/to/save/image>
 ```
-* Generate a gif from images in <path/to/folder>
+* Generate a gif from images in the directory <path/to/folder> (images must be same size)
 ```
 $ python3 slackmojify.py <path/to/folder> -s <location/to/save/image>
