@@ -13,8 +13,6 @@ def slackmojify(image_path, save_path="new_image"):
     this function takes the image and compresses it to a size that
     that is small enough to be uploaded as a custom emoji to Slack
     """
-
-    compressed = None
     if os.path.isfile(image_path):
         compressed = mini(image_path)
         compressed.save(save_path + os.path.splitext(image_path)[1])
@@ -24,6 +22,7 @@ def slackmojify(image_path, save_path="new_image"):
         images2gif.writeGif(save_path + ".gif", compressed)
     else:
         print("Could not create compressed image.")
+        raise
 
 
 if __name__ == "__main__":

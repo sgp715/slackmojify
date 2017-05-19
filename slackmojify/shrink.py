@@ -54,14 +54,18 @@ def mini_gif(directory):
     directory: contains the images to include in gif
     compresses images in folder so they can be made into a gif
     """
-    # TODO: make sure all images are the same size
     images = []
-    sub_dirs = list(os.walk(directory))[0][2]
-    for image_path in sub_dirs:
-        compressed_image = mini(os.path.join(directory, image_path))
-        if compressed_image == None:
-            print("One of the images was not valid.")
-            return None
+    subs = list(os.walk(directory))[0][2]
+    check = False
+    for image_path in subs:
+        if check == False:
+            check = True
+            compressed_image = mini(os.path.join(directory, image_path))
+        else:
+            new_image = mini(os.path.join(directory, image_path))
+            if new_image.size != compressed_image.size:
+                return None
+            compressed_image = new_image
         images.append(compressed_image)
     return images
 
