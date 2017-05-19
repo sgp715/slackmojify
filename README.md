@@ -14,16 +14,10 @@ Images can be JPG, GIF, or PNG, up to 128 pixels in width and height, and a maxi
 ```
 $ pip3 install -r requirements.txt
 ```
-* Pull submodules
+* Alternatively, you can use the pip install
 ```
-$ git submodule update
+$ pip3 install slackmojify
 ```
-* If you want to run it without specifying python, simply give it executable perms
-```
-$ chmod +x slackmojify.py
-```
-* Then either add its location to your path or add somewhere in your existing path
-* Or do something like alias...you know the drill
 
 
 ## Getting started
