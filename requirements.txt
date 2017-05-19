@@ -1,2 +1,1 @@
-pillow
-imageio
+git+git://github.com/isaacgerg/images2gif.git
