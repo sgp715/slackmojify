@@ -1,7 +1,7 @@
-import argparse
 import os
+import argparse
 import imageio
-from images2gif import images2gif
+import slackmojify.images2gif
 from math import floor
 import imghdr
 from PIL import Image, ImageSequence
@@ -89,8 +89,7 @@ def slackmojify(image_path, save_path="new_image"):
         print("Could not create compressed image.")
         raise
 
-
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Make a file uploadable as a slackmoji.")
     parser.add_argument("image", metavar='I', type=str, nargs=1, help="path to the file to minimize")
     parser.add_argument("-s", "--save", type=str, nargs=1, help="specify the file to save the new image to")
@@ -99,3 +98,6 @@ if __name__ == "__main__":
         slackmojify(args.image[0], args.save[0])
     else:
         slackmojify(args.image[0])
+
+if __name__ == "__main__":
+    main()

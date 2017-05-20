@@ -5,7 +5,7 @@ setup(
     name="slackmojify",
     packages=["slackmojify"],
     entry_points = {
-        'console_scripts': ['slackmojify=slackmojify.slackmojify'],
+        'console_scripts': ['slackmojify=slackmojify.slackmojify:main'],
     },
     version="0.1",
     description="Create emojis so that they can be uploaded to Slack.",
