@@ -4,6 +4,9 @@ from setuptools import setup
 setup(
     name="slackmojify",
     packages=["slackmojify"],
+    entry_points = {
+        'console_scripts': ['slackmojify=slackmojify.slackmojify'],
+    },
     version="0.1",
     description="Create emojis so that they can be uploaded to Slack.",
     url="https://github.com/sgp715/slackmojify",
