@@ -6,33 +6,38 @@ We all know how awesome emojis are. They can lighten the mood :laughing: or star
 ## Rules of The Duel
 Images can be JPG, GIF, or PNG, up to 128 pixels in width and height, and a maximum 64KB file size. We recommend using a small, square picture, as Slack will resize the image to fit neatly inside a row of text.
 
-
 ## Install
-* Developed in Python 3
-* Make sure you have pip3
-* Install dependencies
-```
-$ pip3 install -r requirements.txt
-```
-* Alternatively, you can use the pip install
+* Install from pip3
 ```
 $ pip3 install slackmojify
 ```
 
-
 ## Getting started
+* The pip install should configure slackmojify to work as a command line utility so you should be able to run it directly in terminal
+```
+$ slackmojify ...
+```
 * To see the usage description
 ```
-$ python3 slackmojify.py -h
+$ slackmojify.py -h
 ```
 * To compress an image run (where <path/to/image> is the image you want to compress)
 ```
-$ python3 slackmojify.py <path/to/image>
+$ slackmojify.py <path/to/image>
 ```
 * You can also specify where you would like to save the image
 ```
-$ python3 slackmojify.py <path/to/image> -s <location/to/save/image>
+$ slackmojify.py <path/to/image> -s <location/to/save/image>
 ```
 * Generate a gif from images in the directory <path/to/folder> (images must be same size)
 ```
-$ python3 slackmojify.py <path/to/folder> -s <location/to/save/image>
+$ slackmojify.py <path/to/folder> -s <location/to/save/image>
+```
+
+# Example
+* Find an image that you want to slackmojify
+![Picking](/assets/picking.gif)
+* Open a terminal session specify the image and where you want to save it
+![Running](/assets/run.gif)
+* Done :wink:
+![Done](/assets/done.gif)

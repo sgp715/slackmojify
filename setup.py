@@ -7,7 +7,7 @@ setup(
     entry_points = {
         'console_scripts': ['slackmojify=slackmojify.slackmojify:main'],
     },
-    version="0.1",
+    version="0.1.1",
     description="Create emojis so that they can be uploaded to Slack.",
     url="https://github.com/sgp715/slackmojify",
     install_requires=["pillow","imageio"],
@@ -17,8 +17,6 @@ setup(
     keywords=["slack", "emoji"],
     classifiers=[
         'Development Status :: 3 - Alpha',
-        'Intended Audience :: Anyone',
-        'License :: MIT License',
         'Programming Language :: Python :: 3.5',
     ],
     zip_safe=False
