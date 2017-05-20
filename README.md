@@ -36,8 +36,13 @@ $ slackmojify.py <path/to/folder> -s <location/to/save/image>
 
 # Example
 * Find an image that you want to slackmojify
+
 ![Picking](/assets/picking.gif)
+
 * Open a terminal session specify the image and where you want to save it
+
 ![Running](/assets/run.gif)
+
 * Done :wink:
+
 ![Done](/assets/done.gif)
