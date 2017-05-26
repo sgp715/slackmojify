@@ -19,19 +19,19 @@ $ slackmojify ...
 ```
 * To see the usage description
 ```
-$ slackmojify.py -h
+$ slackmojify -h
 ```
 * To compress an image run (where <path/to/image> is the image you want to compress)
 ```
-$ slackmojify.py <path/to/image>
+$ slackmojify <path/to/image>
 ```
 * You can also specify where you would like to save the image
 ```
-$ slackmojify.py <path/to/image> -s <location/to/save/image>
+$ slackmojify <path/to/image> -s <location/to/save/image>
 ```
 * Generate a gif from images in the directory <path/to/folder> (images must be same size)
 ```
-$ slackmojify.py <path/to/folder> -s <location/to/save/image>
+$ slackmojify <path/to/folder> -s <location/to/save/image>
 ```
 
 # Example
